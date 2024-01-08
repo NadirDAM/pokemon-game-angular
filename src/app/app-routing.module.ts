@@ -2,11 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
+import { IniciarSessioElHaidouriComponent } from './iniciar-sessio-el-haidouri/iniciar-sessio-el-haidouri.component';
+
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'iniciar-sessio-el-haidouri',
+    component: IniciarSessioElHaidouriComponent
   },
   {
     path: 'game',
@@ -18,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'iniciar-sessio-el-haidouri'
   }
 ];
 

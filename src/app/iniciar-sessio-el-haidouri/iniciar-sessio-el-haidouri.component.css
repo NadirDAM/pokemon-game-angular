@@ -1,0 +1,8 @@
+button {
+  display: inline-block;
+  width: 130px;
+  margin-left: 20px;
+}
+p {display: inline-block}
+input {display: inline-block; margin-left: 10px;}
+form {margin-left: 40%}
