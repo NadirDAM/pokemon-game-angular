@@ -1,4 +1,7 @@
-<img [src]="url"
+<img (mouseover)="whenOver('img2')"
+     (mouseleave)="whenLeave('img2')"
+     id="img2"
+  [src]="url"
      draggable="false"
      [class.show]="show"
      [style.width.px]="width"

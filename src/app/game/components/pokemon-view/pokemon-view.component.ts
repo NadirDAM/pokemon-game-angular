@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {isMaterialExportDeclaration} from "@angular/material/schematics/ng-update/typescript/module-specifiers";
 
 @Component({
   selector: 'app-pokemon-view',
@@ -24,6 +25,24 @@ export class PokemonViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  whenOver (id:any) {
+    let imatge = document.getElementById(id)
+
+    // @ts-ignore
+    imatge.style.width = 100+"px"
+    // @ts-ignore
+    imatge.style.height = 100+"px"
+  }
+
+  whenLeave (id:any) {
+    let imatge = document.getElementById(id)
+
+    // @ts-ignore
+    imatge.style.width = 275+"px"
+    // @ts-ignore
+    imatge.style.height = 200+"px"
   }
 
 }
