@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../../services/player.service';
+import {ServeijugadorService} from "../../../serveijugador.service";
 
 @Component({
   selector: 'app-gameover',
@@ -17,10 +18,19 @@ export class GameoverComponent implements OnInit {
   }
 
   constructor(
-    private playerService: PlayerService
+    private playerService: PlayerService,
+    private s : ServeijugadorService
   ) { }
 
   ngOnInit(): void {
+    // @ts-ignore
+    let registros = JSON.parse(localStorage.getItem('scores')) || [];
+    const nuevoRegistro = {
+      nom: localStorage.getItem("usuariActual"),
+      punts: this.score,
+    };
+    registros.push(nuevoRegistro);
+    localStorage.setItem('scores', JSON.stringify(registros));
   }
 
 }

@@ -16,8 +16,9 @@ export class IniciarSessioElHaidouriComponent implements OnInit {
   }
 
   enviarJuagador () {
+    localStorage.setItem("usuariActual", this.nomJugador)
+    this.s.nomJugador = this.nomJugador;
     this.router.navigate(['./home']);
-    this.s.nomJugador = this.nomJugador
   }
 
 }

@@ -1,14 +1,13 @@
 
-<form (ngSubmit)="enviarJuagador()">
+<form>
   <p>JUGADOR: </p>
   <input name="nomjugador" matInput [(ngModel)]="this.nomJugador">
-
-  <button mat-raised-button
+  <button (click)="enviarJuagador()"
+          mat-raised-button
           color="primary"
           routerLink="/game"
           class="breath"
           type="submit">
     JUGAR
   </button>
-
 </form>

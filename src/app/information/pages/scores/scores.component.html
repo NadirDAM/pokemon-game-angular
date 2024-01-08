@@ -1,1 +1,8 @@
-<p>scores works!</p>
+<table>
+
+  <tr *ngFor="let item of this.array">
+    <td>
+      {{"Jugador: " + item.nom + ", " + "Puntuació: " + item.punts}}
+    </td>
+  </tr>
+</table>
