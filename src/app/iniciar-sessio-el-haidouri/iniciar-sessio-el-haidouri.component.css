@@ -5,4 +5,4 @@ button {
 }
 p {display: inline-block}
 input {display: inline-block; margin-left: 10px;}
-form {margin-left: 40%}
+form {margin-left: 40%; margin-top: 10%}
